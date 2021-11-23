@@ -17,7 +17,8 @@ formTask.addEventListener('submit'  , async(e) => {
   const hora = f.getHours() + ":" + f.getMinutes() + ":" + f.getSeconds();
   db.collection('informacion').doc().set({
     email , nombre , apellido , telefono , area , fecha , hora
-  })
+  });
+  document.getElementById("form-task").reset();
 } )
 
 const select = document.getElementById('ciudad_de_residencia');
