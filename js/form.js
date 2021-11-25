@@ -21,6 +21,15 @@ formTask.addEventListener('submit'  , async(e) => {
   document.getElementById("form-task").reset();
 } )
 
+const analytics = firebase.analytics();
+
+
+// do something
+analytics.logEvent('select_content', {
+  content_id: 'sendinfo',
+
+});
+
 const select = document.getElementById('ciudad_de_residencia');
 
 select.onclick=selectclick;
@@ -30,10 +39,11 @@ function selectclick(){
 
 
 
+
 const areonautica =  document.getElementById('aeronauticaButton');
 areonautica.onclick = areonauticaButton; // Agrega función onclick al elemento  
 function areonauticaButton() {
-  select.value='Aeronáutica',
+  select.value='Aeronáutica';
   select.style.backgroundColor = "#2524D2";
 }
 
@@ -42,19 +52,20 @@ const agricola =  document.getElementById('agricolaButton');
 agricola.onclick = agricolaButton; // Agrega función onclick al elemento
   
 function agricolaButton() {
-  document.getElementById('ciudad_de_residencia').value='Agricola'
+  document.getElementById('ciudad_de_residencia').value='Agrícola';
   select.style.backgroundColor = "#42AB4A";
 }
 
 
-const alimentaria =  document.getElementById('alimentariaButton');
+//const alimentaria =  document.getElementById('alimentariaButton');
 
-alimentaria.onclick = alimentariaButton; // Agrega función onclick al elemento
-    
-function alimentariaButton() {
-  document.getElementById('ciudad_de_residencia').value='Alimentaria'
-  select.style.backgroundColor = "#826E2D";
-}
+//alimentaria.onclick = alimentariaButton; // Agrega función onclick al elemento
+   
+
+//function alimentariaButton() {
+  //document.getElementById('ciudad_de_residencia').value='Alimentaria';
+  //select.style.backgroundColor = "#826E2D";
+//}
 
 
 
