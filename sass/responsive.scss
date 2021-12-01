@@ -195,6 +195,21 @@ tab device
             display: none;
          }
       }
+      &.two{
+         padding: 50px 0px 0px;
+         margin: auto;
+         min-height: 400px;
+         height: 89vh;
+         background-position: top center;
+         display: flex;
+         align-items: flex-end;
+         .banner-content-wrap{
+            padding: 115px 0 20px;
+            
+          
+         }
+        
+      }
    }
  
    .ts-themes{
@@ -597,6 +612,21 @@ small device /mobile sm and large
          img {
             display: none;
          }
+      }
+      &.two{
+         padding: 50px 0px 0px;
+         margin: auto;
+         min-height: 300px;
+         height: auto;
+         background-position: top center;
+         display: flex;
+         align-items: flex-end;
+         .banner-content-wrap{
+            padding: 115px 0 20px;
+            
+          
+         }
+        
       }
    }
    .ts-themes .col-text .text-direct{
@@ -1303,6 +1333,7 @@ small device /mobile sm and large
             font-weight: bolder;
          }
       }
+     
    }
    .section-networking{
       padding-bottom: 50px;
@@ -1491,6 +1522,27 @@ small device /mobile sm and large
          .banner-item {
             height: auto;
             padding: 70px 0 0;
+            &.two{
+               padding: 80px 0px 30px;
+               margin: auto;
+               min-height: 300px;
+               height: auto;
+               background-position: top center;
+               display: flex;
+               align-items: flex-end;
+               .banner-content-wrap{
+                  padding: 115px 0 -20px;
+                  .banner-title{
+                     span{
+                        font-size: 42px;
+                        line-height: 40px;
+                     }
+                  }
+                  
+                
+               }
+              
+            }
             .col-shadow{
                background-image: url('../images/banner/kv-landing_IDE_mobile.jpg');
                background-size: cover;

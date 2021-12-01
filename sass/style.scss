@@ -412,6 +412,7 @@
 }
 // index 4
 .hero-area.content-left{
+   
    .banner-item{
       padding: 50px 0px 0px;
       margin: 92px 50px 0;
@@ -420,6 +421,49 @@
       background-position: top center;
       display: flex;
       align-items: flex-end;
+      &.two{
+         padding: 100px 0px 0px;
+         margin: auto;
+         max-width: none;
+         min-height: 580px;
+         height: 86vh;
+         background-color: #FFFFFF;
+         display: flex;
+         align-items: center ;
+         .banner-content-wrap{
+            padding: 80px 25px 50px;
+            background-color: #F6F5F0;
+            .banner-title{
+            
+               color: #4C4C4C;
+               text-align: center!important;
+               span{
+                  font-size: 72px;
+                  text-align: center!important
+               }
+            }
+            .banner-info{
+               color: #4C4C4C;
+               text-align: center;
+               margin-bottom: 35px;
+            }
+            .btn{
+               width: 210px!important;
+               margin: auto!important;
+               font-family: 'pressura-bold';
+               font-size: 24px;
+               .inter{
+                  margin: auto!important;
+               }
+               &:hover{
+                  color: #FFFFFF
+               }
+            }
+          
+         }
+        
+        
+      }
       .banner-content-wrap{
          padding: 115px 0 20px;
          
@@ -527,6 +571,7 @@
          pointer-events: none;
       }
    }
+   
 }
 @media (min-width: 1400px){
    .hero-area.content-left{

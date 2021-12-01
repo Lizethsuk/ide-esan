@@ -137,6 +137,22 @@ tab device
   .banner-item .banner-content-wrap img {
     display: none;
   }
+  .banner-item.two {
+    padding: 50px 0px 0px;
+    margin: auto;
+    min-height: 400px;
+    height: 89vh;
+    background-position: top center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .banner-item.two .banner-content-wrap {
+    padding: 115px 0 20px;
+  }
   .ts-themes .col-one .part-col {
     border-right: none;
     margin: 0px auto;
@@ -431,6 +447,22 @@ small device /mobile sm and large
   }
   .banner-item .banner-content-wrap img {
     display: none;
+  }
+  .banner-item.two {
+    padding: 50px 0px 0px;
+    margin: auto;
+    min-height: 300px;
+    height: auto;
+    background-position: top center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .banner-item.two .banner-content-wrap {
+    padding: 115px 0 20px;
   }
   .ts-themes .col-text .text-direct {
     margin-bottom: 120px;
@@ -1091,6 +1123,26 @@ small device /mobile sm and large
     padding: 70px 0 0;
     min-height: inherit;
     margin: 6px 0px 0px;
+  }
+  .hero-area.content-left .banner-item.two {
+    padding: 80px 0px 30px;
+    margin: auto;
+    min-height: 300px;
+    height: auto;
+    background-position: top center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .hero-area.content-left .banner-item.two .banner-content-wrap {
+    padding: 115px 0 -20px;
+  }
+  .hero-area.content-left .banner-item.two .banner-content-wrap .banner-title span {
+    font-size: 42px;
+    line-height: 40px;
   }
   .hero-area.content-left .banner-item .col-shadow {
     background-image: url("../images/banner/kv-landing_IDE_mobile.jpg");

@@ -884,6 +884,57 @@ img.pull-right {
           align-items: flex-end;
 }
 
+.hero-area.content-left .banner-item.two {
+  padding: 100px 0px 0px;
+  margin: auto;
+  max-width: none;
+  min-height: 580px;
+  height: 86vh;
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero-area.content-left .banner-item.two .banner-content-wrap {
+  padding: 80px 25px 50px;
+  background-color: #F6F5F0;
+}
+
+.hero-area.content-left .banner-item.two .banner-content-wrap .banner-title {
+  color: #4C4C4C;
+  text-align: center !important;
+}
+
+.hero-area.content-left .banner-item.two .banner-content-wrap .banner-title span {
+  font-size: 72px;
+  text-align: center !important;
+}
+
+.hero-area.content-left .banner-item.two .banner-content-wrap .banner-info {
+  color: #4C4C4C;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.hero-area.content-left .banner-item.two .banner-content-wrap .btn {
+  width: 210px !important;
+  margin: auto !important;
+  font-family: 'pressura-bold';
+  font-size: 24px;
+}
+
+.hero-area.content-left .banner-item.two .banner-content-wrap .btn .inter {
+  margin: auto !important;
+}
+
+.hero-area.content-left .banner-item.two .banner-content-wrap .btn:hover {
+  color: #FFFFFF;
+}
+
 .hero-area.content-left .banner-item .banner-content-wrap {
   padding: 115px 0 20px;
 }
