@@ -4,24 +4,7 @@
 const db = firebase.firestore()
 const formTask =  document.getElementById('form-task');
 
-const locationHref = `<div class="modal3" tabindex="-1">
-<div class="modal-dialog">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title">Gracias por tu interés!</h5>
-    </div>
-    <div class="modal-body">
-      <p>Modal body text goes here.</p>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal3">Close</button>
-      <button type="button" class="btn btn-primary">Save changes</button>
-    </div>
-  </div>
-</div>
-</div>`
 formTask.addEventListener('submit'  , async(e) => {
-  
   
   e.preventDefault();
   const nombre = formTask['nombres'].value;
@@ -33,12 +16,14 @@ formTask.addEventListener('submit'  , async(e) => {
   const fecha =
     f.getDate() + "/" + (f.getMonth() + 1) + "/" + f.getFullYear();
   const hora = f.getHours() + ":" + f.getMinutes() + ":" + f.getSeconds();
+  
   db.collection('informacion').doc().set({
     email , nombre , apellido , telefono , area , fecha , hora
   })
-  
   .then(function() {
-    window.location.assign("https://www.ide-esan.edu.pe/comenzar/gracias")
+   
+  
+    window.location= "../gracias"
   })
   //locationHref
   //alert('Gracias por tu interés!,  Un asesor de ventas se comunicará contigo.')
