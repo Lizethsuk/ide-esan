@@ -23,7 +23,7 @@ formTask.addEventListener('submit'  , async(e) => {
   .then(function() {
    
   
-    window.location.href= "../gracias"
+    window.location.href= "https://www.ide-esan.edu.pe/comenzar/gracias"
   })
   //locationHref
   //alert('Gracias por tu interés!,  Un asesor de ventas se comunicará contigo.')
