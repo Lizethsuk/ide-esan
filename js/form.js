@@ -20,16 +20,17 @@ formTask.addEventListener('submit'  , async(e) => {
   db.collection('informacion').doc().set({
     email , nombre , apellido , telefono , area , fecha , hora
   })
-  .then(function() {
-   
-  
-    window.location.href= "https://www.ide-esan.edu.pe/comenzar/gracias"
+  .then(function(){
+    //window.location= "https://www.ide-esan.edu.pe/comenzar/gracias/"
+    window.location="../gracias/index.html"
   })
+  
   //locationHref
   //alert('Gracias por tu interés!,  Un asesor de ventas se comunicará contigo.')
   //document.getElementById("form-task").reset();
   
 } )
+
 
 const analytics = firebase.analytics();
 
