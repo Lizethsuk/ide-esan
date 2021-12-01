@@ -23,7 +23,7 @@ formTask.addEventListener('submit'  , async(e) => {
   .then(function() {
    
   
-    window.location= "../gracias"
+    window.location.href= "../gracias"
   })
   //locationHref
   //alert('Gracias por tu interés!,  Un asesor de ventas se comunicará contigo.')
