@@ -20,7 +20,7 @@ tab rotate
          .col-resp{
             padding: 0px!important;
             .form-1{
-               padding: 30px 65px 30px;
+               padding: 0px 0px 30px;
                .form-group{
                   margin: 10px 0px;
                }
@@ -40,7 +40,7 @@ tab rotate
          .col-resp{
             padding: 0px!important;
             .form-1{
-               padding: 38px 65px 30px;
+               padding: 30px 0px 30px;
                .form-group{
                   margin: 10px 0px;
                }
@@ -393,7 +393,7 @@ tab device
       height: auto;
       padding: 95px 0px!important;
       .bloq-area{
-         padding: 30px 0px 10px;
+         padding: 0px 0px 10px;
          margin-bottom: 40px;
          .tab{
             height: 70px;
@@ -414,7 +414,7 @@ tab device
                display: flex;
                align-items: center;
                justify-content: center;
-               font-size: 22.5px;
+               font-size: 19.5px;
             
          }
          .row-infor{
@@ -656,7 +656,7 @@ small device /mobile sm and large
          font-size: 48px;
       }
       .bloq-area{
-         padding: 30px 0px 10px;
+         padding: 0px 0px 10px;
          margin-bottom: 40px;
          .tab{
             height: 70px;
@@ -677,7 +677,7 @@ small device /mobile sm and large
                display: flex;
                align-items: center;
                justify-content: center;
-               font-size: 26px;
+               font-size: 20px;
             
          }
          .row-infor{
@@ -721,6 +721,10 @@ small device /mobile sm and large
                }
                .hide-table{
                   display: none;
+               }
+               .img-left{
+                  left: auto;
+                  margin: auto;
                }
             }
          }
@@ -1318,7 +1322,7 @@ small device /mobile sm and large
    .form-1{
       
       background-color:  #8B8F9D!important;
-      padding: 35px 32px !important;
+      padding: 0px 0px 35px!important;
    }
 
 
@@ -1404,7 +1408,7 @@ small device /mobile sm and large
          margin-bottom: 40px;
       }
       .bloq-area{
-         padding: 50px 0px 10px;
+         padding: 0px 0px 10px;
          margin-bottom: 0px;
          .tab{
             height: 70px;
@@ -1420,9 +1424,9 @@ small device /mobile sm and large
          .btn-area{
             max-width: 270px!important;
             height: 60px;
-            margin: 46px auto 5px;
+            margin: 5px auto 5px;
                border-radius: 40px;
-               font-size: 23.4px;
+               font-size: 19.4px;
                border: none;
             
          }
@@ -1435,7 +1439,7 @@ small device /mobile sm and large
                padding: 2px 0px;
             }
             .bloq-info{
-               padding: 20px 15px;
+               padding: 20px 10px;
                .height-d{
                   height: 31px;
                }
@@ -1676,7 +1680,17 @@ small device /mobile sm and large
    }
     //formulario
     .form-1{
-      padding: 35px 45px 26px !important;
+      padding: 0px 0px 26px !important;
+      .disclamer{
+         font-size: 14px;
+         padding: 16px 2px;
+         span{
+            font-size: 26.5px;
+         }
+      }
+      .form-group{
+         padding: 0px 20px !important;
+      }
       .btn{
          font-size: 21px!important;
       }
@@ -1715,7 +1729,14 @@ small device /mobile sm and large
       }
    }
    .form-1{
-      padding: 35px 32px 22px !important;
+      padding: 0px 0px 22px !important;
+      .disclamer{
+         font-size: 12.5px;
+         padding: 16px 2px;
+         span{
+            font-size: 20.5px;
+         }
+      }
       h1{
          font-size: 17px!important;
          line-height: 17.5px !important;

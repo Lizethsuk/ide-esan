@@ -870,6 +870,115 @@ img.pull-right {
   opacity: 1;
 }
 
+.form-1 {
+  background-color: rgba(139, 143, 157, 0.65);
+  padding: 0vh 0px 6vh;
+  max-width: 490px;
+  width: 100%;
+  margin: auto;
+}
+
+.form-1 .form-group {
+  padding: 0px 62px;
+}
+
+.form-1 .disclamer {
+  text-align: center;
+  padding: 25px 5px;
+  font-size: 19.5px;
+  background-color: #DC0933;
+  margin-bottom: 30px;
+  font-family: 'raleway-bold';
+}
+
+.form-1 .disclamer span {
+  font-size: 35px;
+}
+
+.form-1 .disclamer sup {
+  font-size: 25px;
+  top: 0em;
+}
+
+.form-1 h1 {
+  color: #fff;
+  font-size: 142%;
+  font-family: 'raleway-bold';
+  line-height: 105%;
+  text-align: center;
+}
+
+.form-1 h1 span {
+  font-size: 66%;
+  display: block;
+  margin: 15px 0;
+  line-height: 100%;
+}
+
+.form-1 .form-check-label {
+  font-family: 'raleway-regular';
+  font-size: 17px;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+
+.form-1 .form-check-label a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.form-1 ::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.form-1 :-ms-input-placeholder {
+  color: #fff;
+}
+
+.form-1 ::-ms-input-placeholder {
+  color: #fff;
+}
+
+.form-1 ::placeholder {
+  color: #fff;
+}
+
+.form-1 input, .form-1 select {
+  background-color: #404041;
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  font-family: 'raleway-medium';
+}
+
+.form-1 .form-check {
+  font-size: 14px;
+}
+
+.form-1 select {
+  color: #fff;
+  padding-left: 9px;
+  height: 45px;
+  width: 100%;
+}
+
+.form-1 select:focus {
+  outline: none !important;
+}
+
+.form-1 .btn {
+  border-radius: 50px;
+  height: 70px;
+  font-family: 'pressura-bold';
+  font-size: 27px;
+  line-height: 28px;
+  text-transform: none !important;
+}
+
+.form-1 .btn:hover {
+  color: #fff;
+}
+
 .hero-area.content-left .banner-item {
   padding: 50px 0px 0px;
   margin: 92px 50px 0;
@@ -939,6 +1048,13 @@ img.pull-right {
   padding: 115px 0 20px;
 }
 
+.hero-area.content-left .banner-item .banner-content-wrap .div-span {
+  font-size: 14px;
+  line-height: 14px;
+  margin-bottom: 24px;
+  font-family: 'raleway-regular';
+}
+
 .hero-area.content-left .banner-item .banner-content-wrap .title-shap-img {
   margin-bottom: 20px;
   max-width: 70px;
@@ -958,7 +1074,7 @@ img.pull-right {
 }
 
 .hero-area.content-left .banner-item .banner-content-wrap .banner-info {
-  margin-bottom: 69px;
+  margin-bottom: 45px;
   font-size: 25px;
   font-family: 'raleway-regular';
   line-height: 26px;
@@ -968,93 +1084,6 @@ img.pull-right {
   right: 13px;
   position: absolute;
   bottom: 21px;
-}
-
-.hero-area.content-left .banner-item .form-1 {
-  background-color: rgba(139, 143, 157, 0.65);
-  padding: 8.5vh 62px 6.5vh;
-  max-width: 490px;
-  width: 100%;
-  margin: auto;
-}
-
-.hero-area.content-left .banner-item .form-1 h1 {
-  color: #fff;
-  font-size: 142%;
-  font-family: 'raleway-bold';
-  line-height: 105%;
-  text-align: center;
-}
-
-.hero-area.content-left .banner-item .form-1 h1 span {
-  font-size: 66%;
-  display: block;
-  margin: 15px 0;
-  line-height: 100%;
-}
-
-.hero-area.content-left .banner-item .form-1 .form-check-label {
-  font-family: 'raleway-regular';
-  font-size: 17px;
-  line-height: 20px;
-  margin-bottom: 20px;
-}
-
-.hero-area.content-left .banner-item .form-1 .form-check-label a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.hero-area.content-left .banner-item .form-1 ::-webkit-input-placeholder {
-  color: #fff;
-}
-
-.hero-area.content-left .banner-item .form-1 :-ms-input-placeholder {
-  color: #fff;
-}
-
-.hero-area.content-left .banner-item .form-1 ::-ms-input-placeholder {
-  color: #fff;
-}
-
-.hero-area.content-left .banner-item .form-1 ::placeholder {
-  color: #fff;
-}
-
-.hero-area.content-left .banner-item .form-1 input, .hero-area.content-left .banner-item .form-1 select {
-  background-color: #404041;
-  border: none;
-  color: #fff;
-  border-radius: 10px;
-  font-family: 'raleway-medium';
-}
-
-.hero-area.content-left .banner-item .form-1 .form-check {
-  font-size: 14px;
-}
-
-.hero-area.content-left .banner-item .form-1 select {
-  color: #fff;
-  padding-left: 9px;
-  height: 45px;
-  width: 100%;
-}
-
-.hero-area.content-left .banner-item .form-1 select:focus {
-  outline: none !important;
-}
-
-.hero-area.content-left .banner-item .form-1 .btn {
-  border-radius: 50px;
-  height: 70px;
-  font-family: 'pressura-bold';
-  font-size: 27px;
-  line-height: 28px;
-  text-transform: none !important;
-}
-
-.hero-area.content-left .banner-item .form-1 .btn:hover {
-  color: #fff;
 }
 
 .hero-area.content-left .banner-item .box-select::after {
@@ -1679,9 +1708,23 @@ img.pull-right {
   margin-bottom: 70px;
 }
 
+.ts-schedule .col-bloq-sello {
+  position: relative;
+  content: url(../images/footer/logo/logo.png);
+  z-index: 6000;
+}
+
 .ts-schedule .bloq-area {
-  padding: 70px 100px 10px;
+  padding: 0px 78px 10px;
   margin-bottom: 40px;
+}
+
+.ts-schedule .bloq-area .row-btns {
+  min-height: 150px;
+}
+
+.ts-schedule .bloq-area .row-btns .col-nm {
+  padding-top: 35px;
 }
 
 .ts-schedule .bloq-area.aeronautica {
@@ -1813,7 +1856,7 @@ img.pull-right {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 24.6px;
+  font-size: 19.6px;
   font-family: 'pressura-bold';
 }
 
@@ -1829,6 +1872,12 @@ img.pull-right {
 
 .ts-schedule .bloq-area .row-infor .bloq-info {
   padding: 20px 40px 20px 20px;
+}
+
+.ts-schedule .bloq-area .row-infor .bloq-info .img-left {
+  left: 30px;
+  position: relative;
+  width: 140px;
 }
 
 .ts-schedule .bloq-area .row-infor .bloq-info h3 {
@@ -3218,6 +3267,7 @@ img.pull-right {
 
 .ts-contact-form .contact-form .form-group {
   margin-bottom: 30px;
+  padding: auto 65px;
 }
 
 .ts-contact-form .contact-form .form-group .form-control {
