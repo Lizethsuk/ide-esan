@@ -14,7 +14,7 @@ formTask.addEventListener('submit'  , async(e) => {
   const area = formTask['ciudad_de_residencia'].value;
   const f = new Date();
   const fecha =
-    f.getDate() + "/" + (f.getMonth() + 1) + "/" + f.getFullYear();
+    f.getDate() + "-" + (f.getMonth() + 1) + "," + f.getFullYear();
   const hora = f.getHours() + ":" + f.getMinutes() + ":" + f.getSeconds();
   
   db.collection('informacion').doc().set({
