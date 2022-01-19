@@ -87,12 +87,12 @@
                       <th scope="col">Apellido</th>
                       <th scope="col">Celular</th>
                       <th scope="col">Email</th>
-                      <th scope="col">Fecha</th>
+                      <th scope="col">Fecha <br> (dia - mes , año)</th>
                       <th scope="col">Hora</th>
                     </tr>
                   </thead>
                   <tbody id="table-container">
-                    <tr v-for="(item, index) in usuarios.slice(pageStart, pageStart + countOfPage)" :key="index">
+                    <tr v-for="(item, index) in usuarios" :key="index">
                       <td>{{ item.area }}</td>
                       <td>{{ item.nombre }}</td>
                       <td>{{ item.apellido }}</td>
@@ -116,7 +116,7 @@
               <button type="button" class="btn btn-secondary btn-excel" @click="ExportExcel('xls')">
                 Exportar excel ".xls"</button>
             </div>
-            <div class="col-sm">
+            <!-- <div class="col-sm">
               <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-end">
 
@@ -133,7 +133,7 @@
 
                 </ul>
               </nav>
-            </div>
+            </div> -->
           </div>
           <!-- row end-->
         </div>
