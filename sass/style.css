@@ -56,6 +56,12 @@
 }
 
 @font-face {
+  font-family: 'pressura';
+  src: url("../fonts/Pressura/pressura-bold.ttf");
+  src: url("../fonts/Pressura/gt-pressura-regular-web-webfont.ttf") format("truetype");
+}
+
+@font-face {
   font-family: 'raleway-regular';
   src: url("../fonts/raleway/Raleway-Regular.ttf");
   src: url("../fonts/raleway/Raleway-Regular.ttf") format("truetype");
@@ -913,6 +919,7 @@ img.pull-right {
   display: block;
   margin: 15px 0;
   line-height: 100%;
+  font-family: 'raleway-regular';
 }
 
 .form-1 .form-check-label {
@@ -948,7 +955,7 @@ img.pull-right {
   border: none;
   color: #fff;
   border-radius: 10px;
-  font-family: 'raleway-medium';
+  font-family: 'raleway-regular';
 }
 
 .form-1 .form-check {
@@ -1856,7 +1863,7 @@ img.pull-right {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 19.6px;
-  font-family: 'pressura-bold';
+  font-family: 'pressura';
 }
 
 .ts-schedule .bloq-area .row-infor {

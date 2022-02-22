@@ -24,6 +24,12 @@
 }
 
 @font-face {
+  font-family: 'pressura';
+  src: url("../fonts/Pressura/pressura-bold.ttf");
+  src: url("../fonts/Pressura/gt-pressura-regular-web-webfont.ttf") format("truetype");
+}
+
+@font-face {
   font-family: 'raleway-regular';
   src: url("../fonts/raleway/Raleway-Regular.ttf");
   src: url("../fonts/raleway/Raleway-Regular.ttf") format("truetype");
