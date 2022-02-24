@@ -21,7 +21,7 @@ formTask.addEventListener('submit'  , async(e) => {
     email , nombre , apellido , telefono , area , fecha , hora
   })
   .then(function(){
-    window.location= "https://www.ide-esan.edu.pe/comenzar/gracias/"
+    window.location.href= "../gracias/index.html"
     
   })
   
