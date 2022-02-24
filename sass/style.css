@@ -3869,16 +3869,13 @@ blockquote:before {
 
 /*------------back to top-------------*/
 .BackTo {
-  background: #DC0933 none repeat scroll 0 0;
   border-radius: 50%;
   bottom: 35px;
   color: #979797;
   cursor: pointer;
-  height: 44px;
   position: fixed;
   right: 14px;
   text-align: center;
-  width: 44px;
   z-index: 9;
   display: block;
   padding: 8px 0;
