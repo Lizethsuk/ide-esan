@@ -563,6 +563,7 @@ small device /mobile sm and large
   .ts-schedule .bloq-area .row-infor .bloq-info .img-left {
     left: auto;
     margin: auto;
+    display: block;
   }
   .ts-schedule .bloq-area .row-btns {
     margin-left: 0px !important;
