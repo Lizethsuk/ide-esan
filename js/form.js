@@ -13,15 +13,14 @@ formTask.addEventListener('submit'  , async(e) => {
   const telefono = formTask['telefono'].value;
   const area = formTask['ciudad_de_residencia'].value;
   const f = new Date();
-  const fecha =
-    f.getDate() + "-" + (f.getMonth() + 1) + "," + f.getFullYear();
+  const fecha = f.getDate() + "/" + (f.getMonth() + 1) + "/" + f.getFullYear(); 
   const hora = f.getHours() + ":" + f.getMinutes() + ":" + f.getSeconds();
-  
+/*   const fecha = new Date(); */
   db.collection('informacion').doc().set({
-    email , nombre , apellido , telefono , area , fecha , hora
+    email , nombre , apellido , telefono , area , fecha, hora 
   })
   .then(function(){
-    window.location.href= "../gracias/index.html"
+    window.location.href= "https://ide-esan.edu.pe/comenzar/gracias/"
     
   })
   
