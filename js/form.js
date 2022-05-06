@@ -20,7 +20,7 @@ formTask.addEventListener('submit'  , async(e) => {
 
   saveInfo(nombre, email , apellido , telefono , area, fecha, hora )
   .then(function(){
-    window.location.href= "../gracias/index.html"
+    window.location.href= "https://ide-esan.edu.pe/comenzar/gracias/"
     
   })
 
