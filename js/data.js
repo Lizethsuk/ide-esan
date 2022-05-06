@@ -1,66 +1,118 @@
-const db = firebase.firestore();
-const auth = firebase.auth();
+import {
+  onGetTasks,
+  getAuth,
+  signOut
+} from "./firebase.js";
 
-new Vue({
-  data() {
-    return {
-      name: '',
-      usuarios: [],
-      // countOfPage: 10,
-      // currPage: 1,
-      // filter_name: ''
+// const taskForm = document.getElementById("task-form");
+const tasksContainer = document.getElementById("tasks-container");
+
+
+window.addEventListener("DOMContentLoaded", async (e) => {
+  // const querySnapshot = await getTasks();
+  // querySnapshot.forEach((doc) => {
+  //   console.log(doc.data());
+  // });
+
+  onGetTasks((querySnapshot) => {
+    tasksContainer.innerHTML = "";
+
+    querySnapshot.forEach((doc) => {
+      const info = doc.data();
+
+      tasksContainer.innerHTML += `
+
+          <td>${info.area}</td>
+          <td>${info.nombre}</td>
+          <td>${info.apellido}</td>
+          <td>${info.email}</td>
+                    <td>${info.telefono}</td>
+          <td>${info.fecha}</td>
+
+          <td>${info.hora}</td>
+    
+`;
+    });
+
+  
+  });
+});
+
+// taskForm.addEventListener("submit", async (e) => {
+//   e.preventDefault();
+
+//   const title = taskForm["task-title"];
+//   const description = taskForm["task-description"];
+
+//   try {
+//     if (!editStatus) {
+//       await saveTask(title.value, description.value);
+//     } else {
+//       await updateTask(id, {
+//         title: title.value,
+//         description: description.value,
+//       });
+
+//       editStatus = false;
+//       id = "";
+//       taskForm["btn-task-form"].innerText = "Save";
+//     }
+
+//     taskForm.reset();
+//     title.focus();
+//   } catch (error) {
+//     console.log(error);
+//   }
+// });
+function htmlToCSV(html, filename) {
+  var data = [];
+  var rows = document.querySelectorAll("table tr");
+
+  for (var i = 0; i < rows.length; i++) {
+    var row = [], cols = rows[i].querySelectorAll("td, th");
+
+    for (var j = 0; j < cols.length; j++) {
+      row.push(cols[j].innerText);
     }
-  },
-  computed: {
-    // filteredRows: function () {
-    //   var filter_name = this.filter_name.toLowerCase();
-    //   return (this.filter_name.trim() !== '') ?
-    //     this.rows.filter(function (d) { return d.name.toLowerCase().indexOf(filter_name) > -1; }) :
-    //     this.rows;
-    // },
 
-    // pageStart: function () {
-    //   return (this.currPage - 1) * this.countOfPage;
-    // },
-    // totalPage: function () {
-    //   return Math.ceil(this.usuarios.length / this.countOfPage);
-    // }
-  },
-  methods: {
-    // setPage(idx) {
-    //   if (idx <= 0 || idx > this.totalPage) {
-    //     return;
-    //   }
-    //   this.currPage = idx;
-    // },
-    ExportExcel(type, fn, dl) {
-      var elt = this.$refs.exportable_table;
-      var wb = XLSX.utils.table_to_book(elt, { sheet: "Sheet JS" });
-      return dl ?
-        XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }) :
-        XLSX.writeFile(wb, fn || (("data" + '.' || 'SheetJSTableExport.') + (type || 'xlsx')));
-    },
-    cerrarSesion() {
-      // e.preventDefault();
-      auth.signOut().then(() => {
-        window.location.href = "index.html";
+    data.push(row.join(","));
+  }
 
-      });
-    },
-    obtenerDatos() {
-      const onGetDatos = (callback) => db.collection("informacion").onSnapshot(callback);
-      onGetDatos((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-          let usuario = doc.data();
-          usuario.id = doc.id;
-          this.usuarios.push(usuario);
-        });
-      });
+  downloadCSVFile(data.join("\n"), filename);
+}
 
-    },
 
-  },
-  mounted() {
-    this.obtenerDatos();
-  },
-}).$mount('#app')
+function downloadCSVFile(csv, filename) {
+  var csv_file, download_link;
+
+  csv_file = new Blob([csv], { type: "text/csv" });
+
+  download_link = document.createElement("a");
+
+  download_link.download = filename;
+
+  download_link.href = window.URL.createObjectURL(csv_file);
+
+  download_link.style.display = "none";
+
+  document.body.appendChild(download_link);
+
+  download_link.click();
+}
+document.getElementById("exportar").addEventListener("click", function () {
+  var html = document.querySelector("table").outerHTML;
+  htmlToCSV(html, "students.csv");
+});
+
+document.getElementById("cerrarSesion").addEventListener("click", function () {
+
+  const auth = getAuth();
+  signOut(auth).then(() => {
+    window.location.href = "index.html";
+  }).catch((error) => {
+    console.log(error.code, error.message)
+  });
+
+  // var html = document.querySelector("table").outerHTML;
+  // htmlToCSV(html, "students.csv");
+});

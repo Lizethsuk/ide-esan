@@ -41,8 +41,8 @@
   <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
 
   <style>
-    .two-banner {
-      height: auto !important;
+    .two-banner{
+      height: auto!important;
     }
   </style>
 
@@ -85,7 +85,6 @@
             <div class="col">
               <div class="table-responsive">
 
-
                 <table ref="exportable_table" id="tableExcel" class="table table-users">
                   <thead>
                     <tr>
@@ -94,22 +93,19 @@
                       <th scope="col">Apellido</th>
                       <th scope="col">Celular</th>
                       <th scope="col">Email</th>
-                      <th scope="col">Fecha </th>
+                      <th scope="col">Fecha <br> (dia - mes , año)</th>
                       <th scope="col">Hora</th>
                     </tr>
                   </thead>
-                  <tbody id="tasks-container">
-
-                    <tr >
-                      <td>{{userData.area}}</td>
-                      <td>{{userData.nombre}}</td>
-
-                      <td>{{ userData.apellido }}</td>
-                      <td>{{ userData.telefono }}</td>
-                      <td>{{ userData.email }}</td>
-                      <td>{{ userData.fecha }}</td>
-                      <td>{{ userData.hora }}</td>
-
+                  <tbody id="table-container">
+                    <tr v-for="(item, index) in usuarios" :key="index">
+                      <td>{{ item.area }}</td>
+                      <td>{{ item.nombre }}</td>
+                      <td>{{ item.apellido }}</td>
+                      <td>{{ item.telefono }}</td>
+                      <td>{{ item.email }}</td>
+                      <td>{{ item.fecha }}</td>
+                      <td>{{ item.hora }}</td>
                     </tr>
                   </tbody>
                 </table>
@@ -118,13 +114,32 @@
 
           </div>
           <div class="row">
-
+            <!-- <div class="col-sm">
+              <button type="button" class="btn btn-secondary btn-excel" @click="ExportExcel('xlsx')">
+                Exportar excel ".xlsx"</button>
+            </div> -->
             <div class="col-sm">
-
-              <button type="button" id="exportar" class="btn btn-secondary btn-excel" @click="ExportExcel(xls)">
+              <button type="button" class="btn btn-secondary btn-excel" @click="ExportExcel('xls')">
                 Exportar excel </button>
             </div>
+            <!-- <div class="col-sm">
+              <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-end">
 
+                  <li class="page-item" v-bind:class="{'disabled': (currPage === 1)}"
+                    @click.prevent="setPage(currPage-1)"><a class="page-link" href="">Prev</a></li>
+
+
+                  <li class="page-item" v-for="n in totalPage" v-bind:class="{'active': (currPage === (n))}"
+                    @click.prevent="setPage(n)"><a class="page-link" href="">{{n}}</a></li>
+
+
+                  <li class="page-item" v-bind:class="{'disabled': (currPage === totalPage)}"
+                    @click.prevent="setPage(currPage+1)"><a class="page-link" href="">Next</a></li>
+
+                </ul>
+              </nav>
+            </div> -->
           </div>
           <!-- row end-->
         </div>
@@ -142,26 +157,9 @@
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
-  <!-- <script src="./js/firebase.js"></script> -->
-  <script src="./js/data.js" type="module"  ></script>
+  <script src="./js/firebase.js"></script>
+  <script src="./js/data.js"></script>
 
 </body>
-<!-- <script>
-  import { getinformacion } from './js/firebase.js';
-
-  const tableInfo = document.getElementById('table-responsive');
-
-  window.addEventListener('DOMContentLoaded', async () => {
-    const querySnapshot = await getinformacion()
-
-    let html = ''
-    querySnapshot.forEach(doc => {
-      const info = doc.data()
-      console.log(doc)
-    });
-
-  })
-
-</script> -->
 
 </html>

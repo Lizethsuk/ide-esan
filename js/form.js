@@ -1,7 +1,9 @@
 
 // import firebase from "./firebase";
-
-const db = firebase.firestore()
+import {
+  saveInfo
+} from "./firebase.js";
+// const db = firebase.firestore()
 const formTask =  document.getElementById('form-task');
 
 formTask.addEventListener('submit'  , async(e) => {
@@ -15,30 +17,25 @@ formTask.addEventListener('submit'  , async(e) => {
   const f = new Date();
   const fecha = f.getDate() + "/" + (f.getMonth() + 1) + "/" + f.getFullYear(); 
   const hora = f.getHours() + ":" + f.getMinutes() + ":" + f.getSeconds();
-/*   const fecha = new Date(); */
-  db.collection('informacion').doc().set({
-    email , nombre , apellido , telefono , area , fecha, hora 
-  })
+
+  saveInfo(nombre, email , apellido , telefono , area, fecha, hora )
   .then(function(){
     window.location.href= "https://ide-esan.edu.pe/comenzar/gracias/"
     
   })
+
+  // db.collection('informacion').doc().set({
+  //   email , nombre , apellido , telefono , area , fecha , hora
+  // })
+  // .then(function(){
+  //   window.location.href= "../gracias/index.html"
+    
+  // })
   
-  //locationHref
-  //alert('Gracias por tu interés!,  Un asesor de ventas se comunicará contigo.')
-  //document.getElementById("form-task").reset();
   
 } )
 
 
-const analytics = firebase.analytics();
-
-
-// do something
-analytics.logEvent('select_content', {
-  content_id: 'sendinfo',
-
-});
 
 const select = document.getElementById('ciudad_de_residencia');
 
@@ -65,17 +62,6 @@ function agricolaButton() {
   document.getElementById('ciudad_de_residencia').value='Agrícola';
   select.style.backgroundColor = "#42AB4A";
 }
-
-
-//const alimentaria =  document.getElementById('alimentariaButton');
-
-//alimentaria.onclick = alimentariaButton; // Agrega función onclick al elemento
-   
-
-//function alimentariaButton() {
-  //document.getElementById('ciudad_de_residencia').value='Alimentaria';
-  //select.style.backgroundColor = "#826E2D";
-//}
 
 
 
